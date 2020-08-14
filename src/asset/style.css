@@ -1,0 +1,260 @@
+@font-face{
+    font-family: psb;
+    src:url("./font/Product\ Sans\ Bold.ttf");
+}
+
+@font-face{
+    font-family: pst;
+    src: url("./font/Product\ Sans\ Thin\ 250.ttf");
+}
+
+@font-face{
+    font-family: avenir;
+    src:url("./font/AvenirLTStd-Book.otf");
+}
+
+
+/* hHEADER BIG */
+
+.wrapHead{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:547px;
+    background-image: url("./img/bgHead.png");
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumboTron{
+    width:100%;
+    height: 547px;
+    margin:0 auto;
+   background-color: rgba(29, 26, 26, 0.377);
+}
+
+
+.btnLogin{
+    margin:5% 5px;
+    height: 30px;
+    width:100px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    float:right;
+    font-family: psb;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: unset;
+  
+}
+
+.btnRegis{
+    margin:5% 5px;
+    height: 30px;
+    width:100px;
+    background: #FFAF00;
+    border-radius: 5px;
+    float:right;
+    font-family: psb;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+}
+
+.wrapHead h1{
+    margin-top: 80px;
+    font-family: psb;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    color: #FFffff;
+}
+
+.wrapHead h2{
+    font-family: pst;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+.wrapHead p{
+    font-family: psb;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.wrapHead input{
+    width: 980px;
+    height: 50px;
+    background: #FFFFFF;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+}
+
+.avatar{
+    margin-top: 10px;
+}
+
+.btnSearch{
+    font-family: psb;
+    width: 120px;
+    line-height:50px;
+    height: 50px;
+    background: #FFAF00;
+    border-radius: 0px 5px 5px 0px;
+    border: unset;
+    color: white;
+}
+/* HEADER KECIL */
+
+.headerKecil{
+    padding: 0;
+    height:75px;
+    width:100%;
+    background-image: url("./img/bgHead.png");
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.containerHeaderKecil{
+    background-color: rgba(34, 30, 30, 0.377);
+}
+
+/* FOOTER*/
+
+.footer{
+    widows: 100%;
+    height: 54px;
+    position: relative;
+    margin:0;
+    padding: 10px;
+
+    color:white;
+    font-size: 18px;
+    font-family: psb;
+    background-color: #FFAF00;
+    text-align: center;
+}
+
+.footer p{
+
+    left: 400px;
+    text-align: center;
+    margin:0;
+
+}
+
+.footer img{
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+/* Card */
+
+.wrapCard{
+    position: relative;
+    margin:0;
+    padding: 0;
+    width:100%;
+    height:350px;
+    background-color: #E5E5E5;
+}
+
+.ornamentBunga{
+    padding:0;
+    margin-top:-60px;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+
+.containerCard{
+    padding:50px 15px;
+    width: 250px;
+    height: 350px;
+    background: white;
+    margin-top: -40px;
+    border-radius: 5px;
+}
+
+.containerCard img{
+    margin: 5px 35%;
+}
+
+.containerCard h1{
+    margin: 30px 0;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.containerCard h2{
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #878787;
+}
+ /* DESTINATION */
+
+.wrapUniversal{
+    background-color: #E5E5E5;
+    
+    padding: 5% 9%;
+    padding-bottom: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.containerDestination{
+    padding: 0;
+    font-family: Avenir;
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 2%;
+}
+
+.containerDestination img{
+    width:320px;
+margin:3% auto;
+}
+
+.containerDestination h1{
+ font-size: 24px;
+}
+
+.containerDestination .price{
+    font-size: 18px;
+    color:#FFAF00;
+}
+
+.containerDestination .country{
+    font-size: 18px;
+    color: #878787;
+    text-align: right;
+}
+
