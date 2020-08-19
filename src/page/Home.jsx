@@ -5,6 +5,7 @@ import Footer from '../compt/Footer';
 import Destination from '../compt/Destination';
 
 
+
 function Home() {
     return (
         <div>
@@ -16,6 +17,7 @@ function Home() {
                 height: "100px",
                 paddingTop: "5%"
             }}>Group Tour</h1>
+
             <Destination />
             <Footer />
         </div>

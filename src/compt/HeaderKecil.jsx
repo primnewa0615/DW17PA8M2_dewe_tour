@@ -5,7 +5,7 @@ import logo from '../asset/img/logo.png';
 import avatar from '../asset/img/avatar.png';
 
 function HeaderKecil() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
     return (
         <div className="headerKecil">
             <div className="containerHederKecil">

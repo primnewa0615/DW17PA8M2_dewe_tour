@@ -219,8 +219,7 @@
  /* DESTINATION */
 
 .wrapUniversal{
-    background-color: #E5E5E5;
-    
+    background-color: #E5E5E5;;
     padding: 5% 9%;
     padding-bottom: 10%;
     display: flex;
@@ -258,3 +257,120 @@ margin:3% auto;
     text-align: right;
 }
 
+/* DETAIL DESTINATION */
+
+.wrapUniversal .containerDetail{
+    padding: 0 10%;
+    font-family: Avenir;
+}
+
+.containerDetail h1{
+font-weight: 900;
+font-size: 48px;
+color: #000000;
+}
+
+.containerDetail p{
+font-weight: 600;
+font-size: 24px;
+line-height: 10px;
+color: #A8A8A8;
+margin-bottom: 25px;
+}
+
+.mainImage{
+    width: 885px;
+height: 361.16px;
+margin-bottom: 5px;
+}
+
+.childImage{
+ width:291px;
+ height:167px;
+ 
+}
+
+.containerDetail .infoTrip{
+color: #000000;
+font-weight: 900;
+font-size: 18px;
+line-height: 25px;
+margin-top:30px;
+}
+
+.detailTour{
+    width:150px;
+}
+.detailTour .category{
+font-weight: 800;
+font-size: 13px;
+line-height: 15px;
+color: #A8A8A8;
+margin-bottom: 2px;
+}
+
+.detailTour span{
+font-weight: 800;
+font-size: 14px;
+line-height: 25px;
+color: #000000;
+}
+.deskripsi{
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 19px;
+    color: #A8A8A8;
+}
+.deskripsi p{
+    margin-bottom: 3px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+.bottomRow{
+    padding-top: 30px;
+    border-bottom: 2px solid #878787 ;
+}
+
+.bottomRow .yellowPrice{
+font-weight: 900;
+font-size: 24px;
+line-height: 33px;
+color: #FFAF00;
+}
+
+.bottomRow .yellowPrice span{
+    color:black;
+}
+
+#right{
+    float: right;
+}
+
+#right .plusMin{
+    height: 30px;
+    width:30px;
+    border-radius: 50%;
+    border:none;
+    color: white;
+    background-color: #ffaf00;
+}
+
+.bottomRow .total{
+    font-weight: 900;
+    font-size: 20px;
+    color: #000000;
+}
+
+ .btnBook{
+     margin-right: 0;
+     font-size: 18px;
+    margin-top: 20px;
+    width:200px;
+    height: 50px;
+    border-radius: 5px;
+    border:none;
+    color: white;
+    background-color: #ffaf00;
+}

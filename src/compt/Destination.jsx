@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Destinations from '../dumyData/ListDestination';
+import { Destinations } from '../dumyData/ListDestination';
 import "../asset/style.css";
 
 function Destination() {
     const listDestination = Destinations.map((destination) =>
-        <div className="containerDestination">
-            <Container>
+        <div className="containerDestination" key={destination.id}>
+            <Container >
                 <Row><Col><img src={destination.img} alt="" /></Col></Row>
                 <Row><Col><h1>{destination.tittle}</h1></Col></Row>
                 <Row>
@@ -22,5 +22,6 @@ function Destination() {
         </div>
     )
 }
+
 
 export default Destination;
