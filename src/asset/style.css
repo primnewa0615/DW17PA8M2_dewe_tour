@@ -374,3 +374,141 @@ color: #FFAF00;
     color: white;
     background-color: #ffaf00;
 }
+
+/* PROFILE */
+
+.containerProfile{
+    font-family: Avenir;
+    background-color: white;
+    padding: 30px;
+}
+
+.containerProfile h1{
+font-weight: 900;
+font-size: 36px;
+line-height: 24px;
+color: #050505;
+margin-bottom: 50px;
+}
+
+.black{
+    font-weight: 900;
+font-size: 14px;
+line-height: 20px;
+color: #050505;
+}
+
+.grey{
+    font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+color: #8A8C90;
+line-height: 0px;
+}
+
+.personalInfo{
+    margin-bottom: 20px;
+}
+
+.btnChangePhoto{
+    margin-top: 5px;
+    width: 280px;
+    height:50px;
+    background-color: #ffaf00;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+}
+
+/* HISTORY TRIP */
+
+.containerHistoryTrip{
+    padding: 5px;
+    border:2px solid #beb7b7;
+    background-color: white;
+    font-family: Avenir;
+    width: 90%;
+}
+
+.containerHistoryTrip .logo{
+    width: 189px;
+    height:68px ;
+}
+
+.containerHistoryTrip h1{
+    font-weight: 900;
+    font-size: 36px;
+    text-align: center;
+}
+
+.containerHistoryTrip .date{
+    font-weight: 900;
+    font-size: 18px;
+    text-align: center;
+    color: #878787;
+}
+
+.containerHistoryTrip h3{
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 15px;
+}
+
+.containerHistoryTrip .blackThin{
+    font-weight: 800;
+    font-size: 18px;
+    line-height:10px;
+}
+
+.containerHistoryTrip .greyThin{
+    font-size: 14px;
+    line-height: 10px;
+    color: #959595;
+}
+
+.containerHistoryTrip .statusApprove{
+    width: 60px;
+    padding: 5px;
+    font-weight: 500;
+font-size: 12px;
+color: #09c47c;
+background-color: #b9dbc9;
+}
+
+.barcode{
+    margin-left: 60px;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    width:200px;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 10px;
+}
+
+td{
+    width:200px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #B1B1B1;
+    padding: 10px;
+}
+
+tr{
+    
+    border-bottom: 2px solid #B1B1B1;
+}
+
+#qtyTotal{
+    font-weight: 800;
+color: black
+}
+
+#redPrice{
+    color: red;
+}
