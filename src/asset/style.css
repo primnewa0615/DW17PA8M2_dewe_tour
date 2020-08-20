@@ -13,6 +13,11 @@
     src:url("./font/AvenirLTStd-Book.otf");
 }
 
+@font-face{
+    font-family: roboto;
+    src: url("./font/Roboto-Regular.ttf");
+}
+
 
 /* hHEADER BIG */
 
@@ -200,7 +205,7 @@
 
 .containerCard h1{
     margin: 30px 0;
-    font-family: Avenir;
+    font-family: avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
@@ -209,7 +214,7 @@
 }
 
 .containerCard h2{
-    font-family: Avenir;
+    font-family: avenir;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -219,7 +224,7 @@
  /* DESTINATION */
 
 .wrapUniversal{
-    background-color: #E5E5E5;;
+    background-color: #E5E5E5;
     padding: 5% 9%;
     padding-bottom: 10%;
     display: flex;
@@ -229,7 +234,7 @@
 
 .containerDestination{
     padding: 0;
-    font-family: Avenir;
+    font-family: avenir;
     width: 350px;
     height: 350px;
     background-color: white;
@@ -261,7 +266,7 @@ margin:3% auto;
 
 .wrapUniversal .containerDetail{
     padding: 0 10%;
-    font-family: Avenir;
+    font-family: avenir;
 }
 
 .containerDetail h1{
@@ -378,7 +383,7 @@ color: #FFAF00;
 /* PROFILE */
 
 .containerProfile{
-    font-family: Avenir;
+    font-family: avenir;
     background-color: white;
     padding: 30px;
 }
@@ -427,7 +432,7 @@ line-height: 0px;
     padding: 5px;
     border:2px solid #beb7b7;
     background-color: white;
-    font-family: Avenir;
+    font-family: avenir;
     width: 90%;
 }
 
@@ -511,4 +516,37 @@ color: black
 
 #redPrice{
     color: red;
+}
+
+/* LIST TRANSACTION */
+
+.containerListPayment{
+    font-family: roboto;
+    background-color: white;
+    width: 100%;
+    font-size: 14px;
+}
+
+ .containerListPayment td, th{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    width: 200px;
+    color: black;
+    padding: 25px 10px;
+    border-bottom: 1px solid #beb7b7;
+}
+
+.greyRow{
+    background-color: #F9F9F9;
+}
+
+.containerListPayment .cancel{
+    color: red;
+}
+.containerListPayment .approve{
+    color: rgb(12, 189, 130);
+}
+.containerListPayment .pending{
+    color: #F7941E;
 }

@@ -4,6 +4,8 @@ import Detail from './page/Detail';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import PageProfile from './page/PageProfile';
 import WaitingPayment from './page/WaitingPayment';
+import ListTransaction from './page/ListTransaction';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
         <Route exact path="/detail/:id" component={Detail} />
         <Route exact path="/profile" component={PageProfile} />
         <Route exact path="/waitingPayment" component={WaitingPayment} />
+        <Route exact path="/listTransaction" component={ListTransaction} />
       </Router>
 
     </div>
