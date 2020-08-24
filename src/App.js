@@ -8,6 +8,15 @@ import ListTransaction from './page/ListTransaction';
 
 
 function App() {
+
+
+
+  // function hideModal() {
+  //   setDisplay("none")
+  //   return (
+  //     <Login show={display} />
+  //   )
+  // }
   return (
     <div>
       <Router>
