@@ -566,27 +566,50 @@ color: black
     
 }
 
-.wrapModal .close{   
-   
+.wrapModal .close, .wrapModalR .close{   
+   cursor: pointer;
     font-size: 50px;
     color: white;
    margin:0;
    margin-right: 1%;
    margin-top: 1%;
 }
+.wrapModalR{
+    font-family: pst;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+   display: none;
+    height: 1080px;
+    margin-top:-550px;
+    background-color: #056444b9;
+    
+}
+
 .containerModal{
     position: absolute;
     top:10%;
     left: 35%;
     padding: 0;
-    height:480px;
+    height:450px;
+    width: 400px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.containerModalR{
+    position: absolute;
+    top:0;
+    left: 35%;
+    padding: 0;
+    height:640px;
     width: 400px;
     background-color: white;
     border-radius: 3px;
 }
   
 
-.containerModal h1{
+.containerModal h1, .containerModalR h1{
     text-align: center;
     margin:30% 0;
     font-size: 36px;
@@ -594,21 +617,21 @@ color: black
     color:Black;
 }
 
-.containerModal label{
+.containerModal label, .containerModalR label{
     font-family: psb;
 font-style: normal;
 font-weight: bold;
-font-size: 24px;
+font-size: 20px;
 }
-.containerModal input{
+.containerModal input, .containerModalR input{
     width: 370px;
-    height: 50px;
+    height: 40px;
     background: rgba(210, 210, 210, 0.25);
     border: 2px solid rgba(210, 210, 210, 0.25);
     box-sizing: border-box;
     border-radius: 5px;
 }
-.containerModal button{
+.containerModal button, .containerModalR button{
     font-family: psb;
     background-color: #FFAF00;
     color: white;
@@ -619,7 +642,7 @@ font-size: 24px;
     font-size: 24px;
 }
 
-.containerModal p{
+.containerModal p, .containerModalR p{
     font-family: avenir;
 font-weight: normal;
 font-size: 18px;

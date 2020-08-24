@@ -4,7 +4,7 @@ import "../asset/style.css";
 import logo from '../asset/img/logo.png';
 import avatar from '../asset/img/avatar.png';
 import Login from '../compt/Login';
-
+import Register from '../compt/Register';
 
 
 function HeaderBig() {
@@ -15,6 +15,15 @@ function HeaderBig() {
     }
     function hideModal() {
         setDisplay("none")
+    }
+
+
+    const [displayR, setDisplayR] = useState("none");
+    function showModalR() {
+        setDisplayR("block")
+    }
+    function hideModalR() {
+        setDisplayR("none")
     }
 
     return (
@@ -28,7 +37,7 @@ function HeaderBig() {
 
                             :
                             <Col>
-                                <button className="btnRegis">Register</button>
+                                <button className="btnRegis" onClick={showModalR}>Register</button>
                                 <button className="btnLogin" onClick={showModal} >Login</button>
                             </Col>
                         }
@@ -43,6 +52,10 @@ function HeaderBig() {
             <div className="wrapModal" style={{ display: display }}>
                 <p className="close" onClick={hideModal} >X</p>
                 <Login />
+            </div>
+            <div className="wrapModalR" style={{ display: displayR }}>
+                <p className="close" onClick={hideModalR} >X</p>
+                <Register />
             </div>
         </div >
     )
