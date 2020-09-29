@@ -33,6 +33,7 @@
 }
 
 .jumboTron{
+    position: relative;
     width:100%;
     height: 547px;
     margin:0 auto;
@@ -111,7 +112,19 @@
 }
 
 .avatar{
+    padding: 0;
     margin-top: 10px;
+    height:53px;
+    width:53px;
+    border-radius: 50%;
+    border: 2px solid #FFAF00;
+}
+
+.avatarImg{
+    margin:0;
+    height:50px;
+    width:50px;
+    border-radius: 50%;
 }
 
 .btnSearch{
@@ -148,7 +161,7 @@
     position: relative;
     margin:0;
     padding: 10px;
-
+ 
     color:white;
     font-size: 18px;
     font-family: psb;
@@ -232,6 +245,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.wrapProfile{
+    position: relative;
+    background-color: #E5E5E5;
+    padding: 5% 9%;
+    padding-bottom: 10%;
+   
+}
 
 .containerDestination{
     padding: 0;
@@ -251,7 +271,9 @@ margin:3% auto;
 .containerDestination h1{
  font-size: 24px;
 }
-
+.icon{
+    margin:0;
+}
 .containerDestination .price{
     font-size: 18px;
     color:#FFAF00;
@@ -282,6 +304,14 @@ font-size: 24px;
 line-height: 10px;
 color: #A8A8A8;
 margin-bottom: 25px;
+}
+
+.eatText{
+    float:right;
+    width:120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .mainImage{
@@ -387,6 +417,14 @@ color: #FFAF00;
     font-family: avenir;
     background-color: white;
     padding: 30px;
+    width:70%;
+    margin:0 auto;
+}
+
+.containerProfile .fotoProfile{
+    margin:0;
+    height: 330px;
+    width:280px;
 }
 
 .containerProfile h1{
@@ -425,6 +463,23 @@ line-height: 0px;
     font-size: 18px;
     border: none;
     border-radius: 3px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.uploadStruct{
+    position: absolute;
+    right:25px;
+    margin-top: 5px;
+    width: 150px;
+    height:50px;
+    background-color: #18a174;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 50px; 
 }
 
 /* HISTORY TRIP */
@@ -435,6 +490,7 @@ line-height: 0px;
     background-color: white;
     font-family: avenir;
     width: 90%;
+   
 }
 
 .containerHistoryTrip .logo{
@@ -458,7 +514,7 @@ line-height: 0px;
 .containerHistoryTrip h3{
     font-weight: 900;
     font-size: 24px;
-    line-height: 15px;
+    
 }
 
 .containerHistoryTrip .blackThin{
@@ -469,7 +525,7 @@ line-height: 0px;
 
 .containerHistoryTrip .greyThin{
     font-size: 14px;
-    line-height: 10px;
+    
     color: #959595;
 }
 
@@ -480,6 +536,17 @@ line-height: 0px;
 font-size: 12px;
 color: #09c47c;
 background-color: #b9dbc9;
+}
+
+.containerHistoryTrip .pending {
+    color: #F7941E;
+}
+
+.containerHistoryTrip .approve{
+    color:rgb(12, 189, 130);
+}
+.containerHistoryTrip .cancel{
+    color:red;
 }
 
 .barcode{
@@ -505,14 +572,15 @@ td{
     padding: 10px;
 }
 
-tr{
+.logout{
     
-    border-bottom: 2px solid #B1B1B1;
+    border-top: 2px solid #B1B1B1;
 }
 
 #qtyTotal{
     font-weight: 800;
-color: black
+color: black;
+width: 50px;
 }
 
 #redPrice{
@@ -526,16 +594,25 @@ color: black
     background-color: white;
     width: 100%;
     font-size: 14px;
+    margin-top: 10%;
 }
 
  .containerListPayment td, th{
-    white-space:nowrap;
     overflow:hidden;
-    text-overflow:ellipsis;
-    width: 200px;
+    text-overflow: ellipsis;
+    width: 100px;
     color: black;
     padding: 25px 10px;
     border-bottom: 1px solid #beb7b7;
+}
+
+.statusWpayment{
+    width: 150px;
+    padding: 5px;
+    font-weight: 500;
+font-size: 12px;
+color: #e90e06;
+background-color: #e68f8ea8;
 }
 
 .greyRow{
@@ -591,10 +668,21 @@ color: black
     top:10%;
     left: 35%;
     padding: 0;
-    height:450px;
+    height:480px;
     width: 400px;
     background-color: white;
     border-radius: 3px;
+}
+
+.containerModal .wrongPass{
+    height:30px;
+    width: 370px;
+    background-color: #da676788;
+    color: #e00707;
+    font-style: italic;
+    font-size: 14px;
+    text-align: left;
+    line-height: 30px;
 }
 
 .containerModalR{
@@ -606,15 +694,23 @@ color: black
     width: 400px;
     background-color: white;
     border-radius: 3px;
+    overflow: scroll;
 }
   
 
 .containerModal h1, .containerModalR h1{
     text-align: center;
-    margin:30% 0;
+    margin:30% 0 0 0;
     font-size: 36px;
     font-weight: bold;
     color:Black;
+}
+
+.containerModal span, .containerModalR span{
+  font-size: 14px;
+  text-align: left;
+  margin:0;
+  padding: 0;
 }
 
 .containerModal label, .containerModalR label{
@@ -651,4 +747,134 @@ color: #B1B1B1;
 text-align: center;
 }
 
+/* ADD TRIP */
 
+.containerAddTrip{
+    padding: 0 auto;
+    width:95%;
+}
+
+.containerAddTrip label{
+    font-family: avenir;
+    font-weight: 900;
+    font-size:24px;
+}
+
+.containerAddTrip .inputTrip{
+    width: 998px;
+    height: 40px;
+    background: rgba(196, 196, 196, 0.5);
+    border: 2px solid #B1B1B1;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.containerAddTrip .row{
+    margin-bottom: 30px;
+}
+
+.inputTripK{
+    height: 40px;
+    background: rgba(196, 196, 196, 0.5);
+    border: 2px solid #B1B1B1;
+    box-sizing: border-box;
+    border-radius: 5px; 
+}
+
+.containerAddTrip textarea{
+    width:998px;
+    height:80px;
+    background: rgba(196, 196, 196, 0.5);
+    border: 2px solid #B1B1B1;
+    box-sizing: border-box;
+    border-radius: 5px; 
+}
+
+.attache{
+    width:220px;
+    height:60px;
+    background: rgba(196, 196, 196, 0.5);
+    border: 2px solid #B1B1B1;
+    border-radius: 5px; 
+    color:#FFAF00;
+    font-size: 10px;
+    margin-right: 3%;
+    padding: 1% 10px;
+    line-height: 50px;
+    font-family: avenir;
+}
+
+.containerAddTrip button{
+    width: 230px;
+    height: 40px;
+    background: #FFAF00;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-family: avenir;
+    float:right;
+    margin: 5% 2% 0 0;
+    border: none;
+}
+
+.containerAddTrip h1{
+    margin-bottom: 3%;
+    font-family: avenir;
+    font-weight: bolder;
+}
+
+/* APPROVMENT */ 
+.modalApprovment {
+    margin-top: -150px;
+    width: 100%;
+    height: 110%;
+    position :fixed;
+    background-color: #056444b9;
+    z-index: 1;
+}
+
+.btnCancel{
+    height: 30px;
+    width:100px;
+    color: white;
+    font-size: 18px;
+    font-family: avenir;
+    background-color: red;
+  
+    border: none;
+    border-radius: 5px;
+}
+
+.btnApprove{
+    height: 30px;
+    width:100px;
+    color: white;
+    font-size: 18px;
+    font-family: avenir;
+    background-color: #18a174;
+   margin-left:5px;
+    border: none;
+    border-radius: 5px;
+}
+/* TOOGLE */
+
+.toogle{
+    position: absolute;
+    background-color: white;
+    width:200px;
+    padding: 10px;
+    border-radius: 5px;
+right:10px;
+    margin-top: 10px;
+    margin-right: 110px;
+    z-index:1;
+    
+}
+
+.toogle p{
+    color:black;
+    padding: 10px 20px;
+    font-family: psb;
+    line-height: 20px;
+font-weight: bold;
+font-size: 18px;
+}

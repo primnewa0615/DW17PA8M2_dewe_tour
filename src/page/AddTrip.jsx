@@ -1,19 +1,18 @@
 import React, { useContext } from 'react';
 import Header from '../compt/HeaderAdmin';
-import LTransaction from '../compt/LTransaction';
+import AddTripp from '../compt/FormAddTrip';
 import Footer from '../compt/Footer';
 import { UserContext } from '../context/UserContext';
 
-function ListTransaction() {
-    const { user, setEmailState, total, setTotal } = useContext(UserContext);
+function AddTrip() {
+    const { user, setEmailState } = useContext(UserContext);
     return (
-        <div>
+        <>
             <Header user={user} setEmailState={setEmailState} />
-
-            <LTransaction total={total} setTotal={setTotal} />
+            <AddTripp />
             <Footer />
-        </div>
+        </>
     )
 }
 
-export default ListTransaction
+export default AddTrip;

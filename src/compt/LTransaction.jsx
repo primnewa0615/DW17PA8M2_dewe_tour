@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../asset/style.css';
 import cari from '../asset/img/cari.png';
+import axios from 'axios';
+import Approvment from './Approvment';
 
-function LTransaction() {
+
+function LTransaction({ total, setTotal }) {
+    const token = localStorage.getItem('token');
+    const [transaction, setTransaction] = useState([]);
+    const [idTransaction, setIdTransaction] = useState(0);
+    const [count, setCount] = useState(1);
+    const [modalApprov, setModalApprove] = useState("none");
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        axios.get(`http://localhost:5001/api/v1/transaction`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        }).then(res => {
+            const transaction = res.data.data;
+            setTransaction(transaction);
+            setLoading(false);
+        }).catch(err => console.log(err))
+    }, [count]);
+
+    // const settingModal = (id) => {
+    //     setModalApprove("block");
+    //     setIdTransaction(id);
+    // }
     return (
         <div className="wrapUniversal">
             <h1 style={{ fontSize: "36px", position: "absolute", left: "120px", top: "90px" }}>Incoming Transaction</h1>
@@ -10,63 +34,32 @@ function LTransaction() {
 
                 <table>
                     <tr className="whiteRow">
-                        <th>No</th>
+                        <th>Id</th>
                         <th>User</th>
                         <th>Trip</th>
                         <th>Bukti Transfer</th>
                         <th>Stattus Payment</th>
                         <th>Action</th>
                     </tr>
-                    <tr className="greyRow">
-                        <td>1</td>
-                        <td>Asep Hermawan</td>
-                        <td>5D/4N Magic Tokyo Fun</td>
-                        <td>bca.jpg</td>
-                        <td className="pending">Pending</td>
-                        <td><img src={cari} alt="" /></td>
-                    </tr>
-                    <tr className="whiteRow">
-                        <td>2</td>
-                        <td>Oka Manggala</td>
-                        <td>4D/3N Labuan Bajo Delight</td>
-                        <td>bri.jpg</td>
-                        <td className="approve">Approve</td>
-                        <td><img src={cari} alt="" /></td>
-                    </tr>
-                    <tr className="greyRow">
-                        <td>3</td>
-                        <td>Yogi Hamzali</td>
-                        <td>4D/3N Overland Jakarta B...</td>
-                        <td>mandiri.jpg</td>
-                        <td className="cancel">Cancel</td>
-                        <td><img src={cari} alt="" /></td>
-                    </tr>
-                    <tr className="whiteRow">
-                        <td>4</td>
-                        <td>Isti Yuli</td>
-                        <td>8D/6N Wonderful Autum ...</td>
-                        <td>bca.jpg</td>
-                        <td className="cancel">Cancel</td>
-                        <td><img src={cari} alt="" /></td>
-                    </tr>
-                    <tr className="greyRow">
-                        <td>5</td>
-                        <td>Rama Panji</td>
-                        <td>6D/4N Exciting Summer in ...</td>
-                        <td>bri.jpg</td>
-                        <td className="pending">Pending</td>
-                        <td><img src={cari} alt="" /></td>
-                    </tr>
-                    <tr className="whiteRow">
-                        <td>6</td>
-                        <td>Adit Putra</td>
-                        <td>4D/3N Overland Jakarta B...</td>
-                        <td>bri.jpg</td>
-                        <td className="approve">Approve</td>
-                        <td><img src={cari} alt="" /></td>
-                    </tr>
+                    {loading ? <p>loading...</p> :
+                        transaction.filter(trans => trans.status != "Waiting Payment").map(t =>
+
+                            <tr key={t.id}>
+                                <td>{t.id}</td>
+                                <td>{t.user.fullName}</td>
+                                <td>{t.trip.title}</td>
+                                <td>bca.jpg</td>
+                                <td className={(t.status == "Pending") ? "pending" :
+                                    (t.status == "Approve") ? "approve" : "cancel"}>{t.status}</td>
+                                <td onClick={e => { setModalApprove("block"); setIdTransaction(t.id) }}><img src={cari} alt="" /></td>
+
+                            </tr>
+                        )
+                    }
+
                 </table>
             </div>
+            <Approvment display={modalApprov} setDisplay={setModalApprove} idTransaction={idTransaction} count={count} setCount={setCount} total={total} setTotal={setTotal} />
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "../asset/style.css";
@@ -6,12 +6,11 @@ import logo from '../asset/img/logo.png';
 import Axios from 'axios';
 import Login from '../compt/Login';
 import Register from '../compt/Register';
-import u from '../asset/img/u.png';
-import bill from '../asset/img/bill.png';
+import trip from '../asset/img/trip.png';
 import l from '../asset/img/l.png';
 
 
-function HeaderKecil({ user, setEmailState, setLoading }) {
+function HeaderKecil({ user, setEmailState }) {
     // const [user, setUser] = useState([]);
     const [toogle, setToogle] = useState("none");
     const [count, setCount] = useState(0);
@@ -33,6 +32,15 @@ function HeaderKecil({ user, setEmailState, setLoading }) {
         setDisplayR("none")
     }
 
+    // const [email, setEmail] = useState(localStorage.getItem("email"));
+    // useEffect(() => {
+    //     Axios.get(`http://localhost:5001/api/v1/user/${email}`).then(res => {
+    //a         const user = res.data.data.user;
+    //         console.log(user);
+    //         setUser(user);
+
+    //     }).catch(err => console.log(err));
+    // }, [email]);
     const showToogle = (c) => {
 
         if ((c % 2 == 0)) {
@@ -47,14 +55,14 @@ function HeaderKecil({ user, setEmailState, setLoading }) {
     const logout = (e) => {
         e.preventDefault();
         localStorage.clear();
-
+        setEmailState("");
     }
     return (
         <div className="headerKecil">
             <div className="containerHederKecil">
                 <Container>
                     <Row>
-                        <Col><Link to="/"> <img src={logo} alt="" /></Link></Col>
+                        <Col><Link to="/home"> <img src={logo} alt="" /></Link></Col>
                         {!user ?
                             <Col>
                                 <button className="btnRegis" onClick={showModalR}>Register</button>
@@ -74,16 +82,10 @@ function HeaderKecil({ user, setEmailState, setLoading }) {
 
                 <div className="toogle" style={{ display: toogle }}>
                     <table>
-                        <Link to="/profile">
+                        <Link to="/listTransaction">
                             <tr>
-                                <td className="icon"><img src={u} alt="" /></td>
-                                <p>Profile</p>
-                            </tr>
-                        </Link>
-                        <Link to="/waitingPayment">
-                            <tr>
-                                <td className="icon"><img src={bill} alt="" /></td>
-                                <p>Pay</p>
+                                <td className="icon"><img src={trip} alt="" /></td>
+                                <p>Trip</p>
                             </tr>
                         </Link>
 
