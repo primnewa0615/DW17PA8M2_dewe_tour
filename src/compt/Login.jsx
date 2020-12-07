@@ -29,7 +29,7 @@ function Login({ setDisplay, setEmailState }) {
         localStorage.clear();
         axios({
             method: "post",
-            url: "http://localhost:5001/api/v1/login",
+            url: "https://dewetour.herokuapp.com/api/v1/login",
             data: { ...inputValue }
         }).then(res => {
             const user = res.data.data;
@@ -43,7 +43,7 @@ function Login({ setDisplay, setEmailState }) {
 
     // useEffect(() => {
     //     setLoading(true)
-    //     axios.get(`http://localhost:5001/api/v1/user/${email}`).then(res => {
+    //     axios.get(`https://dewetour.herokuapp.com/api/v1/user/${email}`).then(res => {
     //         const user = res.data.data.user
     //         setUser(user);
     //         setLoading(false);

@@ -41,13 +41,13 @@ function FormAddTrip() {
         e.preventDefault();
 
         const token = localStorage.getItem("token")
-        axios.post("http://localhost:5001/api/v1/trip", { ...inputValue }, { headers: { "Authorization": `Bearer ${token}` } })
+        axios.post("https://dewetour.herokuapp.com/api/v1/trip", { ...inputValue }, { headers: { "Authorization": `Bearer ${token}` } })
             .then(res => {
                 const trip = res.data.data;
                 const fd = new FormData();
                 fd.append("image1", inputFile);
                 console.log(fd);
-                axios.patch("http://localhost:5001/api/v1/imageForm", fd, {
+                axios.patch("https://dewetour.herokuapp.com/api/v1/imageForm", fd, {
                     params: {
                         id: trip.id
                     },

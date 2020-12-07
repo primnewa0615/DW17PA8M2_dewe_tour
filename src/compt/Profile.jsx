@@ -22,7 +22,7 @@ function Profile({ user, loading, upload, setUpload, emailState, setUser }) {
         const formData = new FormData();
         formData.append('fileImage', e.target.files[0]);
 
-        axios.patch("http://localhost:5001/api/v1/uploadImgProfile", formData, {
+        axios.patch("https://dewetour.herokuapp.com/api/v1/uploadImgProfile", formData, {
             params: {
                 email: emailState
             },
@@ -35,7 +35,7 @@ function Profile({ user, loading, upload, setUpload, emailState, setUser }) {
         }).catch(err => console.log(err))
     }
     useEffect(() => {
-        axios.get(`http://localhost:5001/api/v1/transaction/${user.id}`, {
+        axios.get(`https://dewetour.herokuapp.com/api/v1/transaction/${user.id}`, {
             headers: { 'Authorization': `Bearer ${token}` }
         }).then(res => {
             const transaction = res.data.data;
@@ -95,7 +95,7 @@ function Profile({ user, loading, upload, setUpload, emailState, setUser }) {
                             </Col>
                             <Col md="5">
                                 {upload ? <img src={userF} alt="" /> :
-                                    <img className="fotoProfile" src={user.img ? `http://localhost:5001/${user.img}` : userF} alt="" />}
+                                    <img className="fotoProfile" src={user.img ? `https://dewetour.herokuapp.com/${user.img}` : userF} alt="" />}
                                 <br /><br />
                                 <label htmlFor="changePhoto" className="btnChangePhoto" >Change Photo Profile</label>
                                 <input

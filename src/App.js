@@ -25,7 +25,7 @@ function App() {
   const [total, setTotal] = useState(0);
   useEffect(() => {
     setLoading(true)
-    axios.get(`http://localhost:5001/api/v1/user/${emailState}`).then(res => {
+    axios.get(`https://dewetour.herokuapp.com/api/v1/user/${emailState}`).then(res => {
       const user = res.data.data.user
       setUser(user);
       setLoading(false);
@@ -37,7 +37,7 @@ function App() {
   }, []);
   useEffect(() => {
     setLoading(true)
-    axios.get(`http://localhost:5001/api/v1/user/${emailState}`).then(res => {
+    axios.get(`https://dewetour.herokuapp.com/api/v1/user/${emailState}`).then(res => {
       const user = res.data.data.user
       setUser(user);
       setLoading(false);
@@ -49,7 +49,7 @@ function App() {
   }, [emailState]);
   useEffect(() => {
     setLoading(true)
-    axios.get(`http://localhost:5001/api/v1/user/${emailState}`).then(res => {
+    axios.get(`https://dewetour.herokuapp.com/api/v1/user/${emailState}`).then(res => {
       const user = res.data.data.user
       setUser(user);
       setLoading(false);
@@ -62,7 +62,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
-    axios.get("http://localhost:5001/api/v1/trip")
+    axios.get("https://dewetour.herokuapp.com/api/v1/trip")
       .then((res) => {
         const trip = res.data.data;
         setTrip(trip);
@@ -73,7 +73,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
-    axios.get("http://localhost:5001/api/v1/trip")
+    axios.get("https://dewetour.herokuapp.com/api/v1/trip")
       .then((res) => {
         const trip = res.data.data;
         setTrip(trip);

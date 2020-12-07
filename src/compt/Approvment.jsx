@@ -24,7 +24,7 @@ function Approvment({ display, idTransaction, setDisplay, count, setCount, total
 
     useEffect(() => {
         setLoading(true)
-        axios.get(`http://localhost:5001/api/v1/transac/${idTransaction}`,
+        axios.get(`https://dewetour.herokuapp.com/api/v1/transac/${idTransaction}`,
             {
                 headers: { 'Authorization': `Bearer ${token}` }
             }
@@ -42,11 +42,11 @@ function Approvment({ display, idTransaction, setDisplay, count, setCount, total
 
     const cancel = () => {
 
-        axios.patch(`http://localhost:5001/api/v1/transaction/${idTransaction}`, { status: "Cancel" }, {
+        axios.patch(`https://dewetour.herokuapp.com/api/v1/transaction/${idTransaction}`, { status: "Cancel" }, {
             headers: { 'Authorization': `Bearer ${token}` }
         }).then(res => {
             setShow(true); setCount(count + 1);
-            axios.get(`http://localhost:5001/api/v1/sumCounterQty/${trip.id}`)
+            axios.get(`https://dewetour.herokuapp.com/api/v1/sumCounterQty/${trip.id}`)
                 .then(res => setTotal(res.data.data)).catch(err => console.log(err));
 
         }).catch(err => console.log(err));
@@ -54,11 +54,11 @@ function Approvment({ display, idTransaction, setDisplay, count, setCount, total
     }
 
     const approve = () => {
-        axios.patch(`http://localhost:5001/api/v1/transaction/${idTransaction}`, { status: "Approve" }, {
+        axios.patch(`https://dewetour.herokuapp.com/api/v1/transaction/${idTransaction}`, { status: "Approve" }, {
             headers: { 'Authorization': `Bearer ${token}` }
         }).then(res => {
             setShow(true); setCount(count + 1);
-            axios.get(`http://localhost:5001/api/v1/sumCounterQty/${trip.id}`)
+            axios.get(`https://dewetour.herokuapp.com/api/v1/sumCounterQty/${trip.id}`)
                 .then(res => setTotal(res.data.data)).catch(err => console.log(err));
 
         }).catch(err => console.log(err));
@@ -67,11 +67,11 @@ function Approvment({ display, idTransaction, setDisplay, count, setCount, total
 
     useEffect(() => {
 
-        axios.patch(`http://localhost:5001/api/v1/trip/${trip.id}`,
+        axios.patch(`https://dewetour.herokuapp.com/api/v1/trip/${trip.id}`,
             { totalCounterQty: total }
         ).then(console.log("berhasil")).catch(err => console.log(err));
 
-        axios.get("http://localhost:5001/api/v1/trip"
+        axios.get("https://dewetour.herokuapp.com/api/v1/trip"
         ).then(console.log("berhasil")).catch(err => console.log(err))
 
 

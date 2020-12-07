@@ -23,7 +23,7 @@ function Destination({ trip }) {
                         <Link to={`/detail/${trip.id}`}>
                             <div className="containerDestination"  >
                                 <Container >
-                                    <Row><Col><img src={`http://localhost:5001/${trip.image1}`} alt="" />
+                                    <Row><Col><img src={`https://dewetour.herokuapp.com/${trip.image1}`} alt="" />
                                         <p style={{
                                             position: "absolute",
                                             width: "52px",

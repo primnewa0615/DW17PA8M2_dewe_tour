@@ -35,10 +35,10 @@ function DetailDestinatios({ user }) {
     const handleClose = () => { setShow(false); setShowErr(false) };
 
     useEffect(() => {
-        // axios.get(`http://localhost:5001/api/v1/user/${email}`)
+        // axios.get(`https://dewetour.herokuapp.com/api/v1/user/${email}`)
         //     .then(res => setUser(res.data.data.user)).catch(err => console.log(err))
         setLoading(true);
-        axios.get(`http://localhost:5001/api/v1/trips/${id}`, {
+        axios.get(`https://dewetour.herokuapp.com/api/v1/trips/${id}`, {
 
             params: {
                 id: id
@@ -64,7 +64,7 @@ function DetailDestinatios({ user }) {
 
     const handleBook = () => {
 
-        axios.post("http://localhost:5001/api/v1/transaction", {
+        axios.post("https://dewetour.herokuapp.com/api/v1/transaction", {
             counterQty: count,
             total: total,
             status: "Waiting Payment",
@@ -100,13 +100,13 @@ function DetailDestinatios({ user }) {
                         </Col>
                     </Row>
                     <Row><Col >
-                        <img src={`http://localhost:5001/${trip.image1}`} alt="" className="mainImage" />
+                        <img src={`https://dewetour.herokuapp.com/${trip.image1}`} alt="" className="mainImage" />
                     </Col></Row>
                     <Col>
                         <Row>
-                            <img src={`http://localhost:5001/${trip.image1}`} alt="" className="childImage" />
-                            <img src={`http://localhost:5001/${trip.image1}`} alt="" className="childImage" style={{ margin: "0 5px" }} />
-                            <img src={`http://localhost:5001/${trip.image1}`} alt="" className="childImage" />
+                            <img src={`https://dewetour.herokuapp.com/${trip.image1}`} alt="" className="childImage" />
+                            <img src={`https://dewetour.herokuapp.com/${trip.image1}`} alt="" className="childImage" style={{ margin: "0 5px" }} />
+                            <img src={`https://dewetour.herokuapp.com/${trip.image1}`} alt="" className="childImage" />
                         </Row>
                     </Col>
 

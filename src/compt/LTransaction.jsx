@@ -14,7 +14,7 @@ function LTransaction({ total, setTotal }) {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        axios.get(`http://localhost:5001/api/v1/transaction`, {
+        axios.get(`https://dewetour.herokuapp.com/api/v1/transaction`, {
             headers: { 'Authorization': `Bearer ${token}` }
         }).then(res => {
             const transaction = res.data.data;
