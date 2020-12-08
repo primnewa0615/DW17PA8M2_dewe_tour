@@ -207,7 +207,7 @@ function FormAddTrip() {
 
                         <Row>
                             <Col>
-                                <button >Add Trip</button>
+                                <button onClick={(e) => addTrip(e)}>Add Trip</button>
                             </Col>
                         </Row>
                     </Container>

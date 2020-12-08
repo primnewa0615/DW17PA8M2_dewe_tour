@@ -21,7 +21,7 @@ function WPayment({ user, upload, setUpload }) {
         const formData = new FormData();
         formData.append('fileImage', e.target.files[0]);
 
-        axios.patch("http://localhost:5001/api/v1/uploadImgStruct", formData, {
+        axios.patch("https://dewetour.herokuapp.com/api/v1/uploadImgStruct", formData, {
             params: {
                 id: idTransaction
             },
@@ -40,7 +40,7 @@ function WPayment({ user, upload, setUpload }) {
     };
     useEffect(() => {
         setLoading(true);
-        axios.get(`http://localhost:5001/api/v1/transaction/${user.id}`, {
+        axios.get(`https://dewetour.herokuapp.com/api/v1/transaction/${user.id}`, {
             headers: { 'Authorization': `Bearer ${token}` }
         }).then(res => {
             const transaction = res.data.data;
@@ -56,12 +56,12 @@ function WPayment({ user, upload, setUpload }) {
     const handlePay = (e, id, struct) => {
         e.preventDefault();
         if (struct) {
-            axios.patch(`http://localhost:5001/api/v1/transaction/${id}`, { status: "Pending" }, {
+            axios.patch(`https://dewetour.herokuapp.com/api/v1/transaction/${id}`, { status: "Pending" }, {
                 headers: { 'Authorization': `Bearer ${token}` }
             }
             )
             setShow(true);
-            axios.get(`http://localhost:5001/api/v1/transaction/${user.id}`, {
+            axios.get(`https://dewetour.herokuapp.com/api/v1/transaction/${user.id}`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             }).then(res => {
                 const transaction = res.data.data;
@@ -131,7 +131,7 @@ function WPayment({ user, upload, setUpload }) {
                                     </Col>
 
                                     <Col md="3">
-                                        <img style={{ width: "160px", height: "170px", marginLeft: "50px" }} src={!t.struct ? struct : `http://localhost:5001/${t.struct}`} alt="" /><br />
+                                        <img style={{ width: "160px", height: "170px", marginLeft: "50px" }} src={!t.struct ? struct : `https://dewetour.herokuapp.com/${t.struct}`} alt="" /><br />
                                         <label htmlFor="upload" className="uploadStruct">Upload Struct</label>
                                         <input style={{ display: "none" }} type="file" id="upload" onChange={e => uploadPhoto(e, t.id)} />
 

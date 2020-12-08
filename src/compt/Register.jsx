@@ -25,7 +25,7 @@ function Login(props) {
 
     const handleRegis = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:5001/api/v1/register", { ...inputValue })
+        axios.post("https://dewetour.herokuapp.com/api/v1/register", { ...inputValue })
             .then(res => {
                 console.log("berhasil");
                 setInputValue({

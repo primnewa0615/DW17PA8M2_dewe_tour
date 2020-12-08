@@ -14,7 +14,7 @@ function Home() {
     const [search, setSearch] = useState("");
 
     useEffect(() => {
-        axios.get(`http://localhost:5001/api/v1/trip/${search}`).then(res => setTrip(res.data.data))
+        axios.get(`https://dewetour.herokuapp.com/api/v1/trip/${search}`).then(res => setTrip(res.data.data))
             .catch(err => console.log(err));
     }, [search]);
     return (
