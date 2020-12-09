@@ -47,11 +47,13 @@ function FormAddTrip() {
                 const fd = new FormData();
                 fd.append("image1", inputFile);
                 console.log(fd);
+                const token = localStorage.getItem('token');
                 axios.patch("https://dewetour.herokuapp.com/api/v1/imageForm", fd, {
                     params: {
                         id: trip.id
                     },
                     headers: {
+                        "Authorization": `Bearer ${token}`,
                         'content-type': 'multipart/form-data'
                     }
                 }).then(res => console.log("image trip berhasil ditambahkan")).catch(err => console.log(err))
