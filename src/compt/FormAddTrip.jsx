@@ -88,8 +88,8 @@ function FormAddTrip() {
                                 >
                                     <option value="1">Indonesia</option>
                                     <option value="2">Turkey</option>
-                                    <option value="3">Japan</option>
-                                    <option value="4">Australia</option>
+                                    <option value="3">Australia</option>
+                                    <option value="4">Japan</option>
                                     <option value="5">South Korea</option>
                                 </select>
                             </Col>
