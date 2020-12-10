@@ -66,7 +66,7 @@ function HeaderBig({ user, setEmailState, search, setSearch }) {
                         <Col><img src={logo} alt="" /></Col>
                         {user ?
 
-                            <div className="avatar" onClick={() => showToogle(count)}><img className="avatarImg" src={`http://localhost:5001/${user.img}`} alt="" /></div>
+                            <div className="avatar" onClick={() => showToogle(count)}><img className="avatarImg" src={`https://dewetour.herokuapp.com/${user.img}`} alt="" /></div>
 
                             :
 

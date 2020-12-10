@@ -60,7 +60,7 @@ function HeaderKecil({ user, setEmailState, setLoading }) {
                                 <button className="btnRegis" onClick={showModalR}>Register</button>
                                 <button className="btnLogin" onClick={showModal}>Login</button>
                             </Col> :
-                            <div className="avatar" onClick={() => showToogle(count)}><img className="avatarImg" src={`http://localhost:5001/${user.img}`} alt="" /></div>}
+                            <div className="avatar" onClick={() => showToogle(count)}><img className="avatarImg" src={`https://dewetour.herokuapp.com/${user.img}`} alt="" /></div>}
                     </Row>
                 </Container>
                 <div className="wrapModal" style={{ display: display }}>
